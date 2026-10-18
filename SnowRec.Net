@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rec Room Fan Hub</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f8ff;color:#202b40}
+header{background:#168cff;color:white;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.logo{font-size:25px;font-weight:900}
+nav{display:flex;gap:18px;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;font-weight:bold}
+.hero{background:linear-gradient(135deg,#087cff,#44c9ff);color:white;text-align:center;padding:75px 20px}
+.hero h1{font-size:clamp(34px,7vw,58px);margin:0 0 16px}
+.hero p{font-size:18px;line-height:1.6}
+.btn{display:inline-block;background:white;color:#087cff;padding:13px 22px;border-radius:12px;text-decoration:none;font-weight:bold;margin:8px;border:0;cursor:pointer}
+section{padding:38px 6%;max-width:1200px;margin:auto}
+h2{font-size:28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:white;border-radius:16px;padding:23px;box-shadow:0 5px 18px #182b4810}
+.card .emoji{font-size:38px}
+.card h3{margin-bottom:8px}
+.card p{line-height:1.6;color:#596579}
+.pill{display:inline-block;background:#e4f2ff;color:#087cff;padding:6px 10px;border-radius:20px;font-size:12px;font-weight:bold}
+footer{background:#17243b;color:white;text-align:center;padding:28px 15px;margin-top:30px}
+footer a{color:#83caff}
+#menuButton{display:none}
+@media(max-width:600px){
+ header{padding:16px 5%}
+ #menuButton{display:block;background:white;color:#087cff;border:0;border-radius:8px;padding:9px 12px;font-weight:bold}
+ nav{display:none;width:100%;flex-direction:column;padding:10px 0}
+ nav.open{display:flex}
+ .hero{padding:55px 18px}
+ section{padding:28px 5%}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">🎮 Rec Room Fan Hub</div>
+  <button id="menuButton" onclick="toggleMenu()">Menu ☰</button>
+  <nav id="nav">
+    <a href="#home" onclick="closeMenu()">Home</a>
+    <a href="#rooms" onclick="closeMenu()">Rooms</a>
+    <a href="#community" onclick="closeMenu()">Community</a>
+    <a href="#news" onclick="closeMenu()">News</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <h1>Your Next Adventure Starts Here!</h1>
+  <p>Discover experiences, explore creative rooms and connect with the Rec Room community.</p>
+  <a class="btn" href="https://rec.net/" target="_blank" rel="noopener">Visit Rec.net ↗</a>
+  <a class="btn" href="#rooms">Explore Rooms ↓</a>
+</section>
+
+<section id="rooms">
+  <h2>🌟 Featured Experiences</h2>
+  <div class="grid">
+    <article class="card">
+      <div class="emoji">🏁</div>
+      <span class="pill">RACING</span>
+      <h3>Racing Adventures</h3>
+      <p>Discover exciting racing experiences made by creators.</p>
+      <a href="https://rec.net/" target="_blank" rel="noopener">Explore ↗</a>
+    </article>
+    <article class="card">
+      <div class="emoji">⚔️</div>
+      <span class="pill">ADVENTURE</span>
+      <h3>Quest Adventures</h3>
+      <p>Team up with friends and discover new challenges.</p>
+      <a href="https://rec.net/" target="_blank" rel="noopener">Explore ↗</a>
+    </article>
+    <article class="card">
+      <div class="emoji">🎨</div>
+      <span class="pill">CREATIVE</span>
+      <h3>Creative Rooms</h3>
+      <p>Find inspiration from community-built spaces.</p>
+      <a href="https://rec.net/" target="_blank" rel="noopener">Explore ↗</a>
+    </article>
+  </div>
+</section>
+
+<section id="community">
+  <h2>👥 Join the Community</h2>
+  <div class="grid">
+    <article class="card">
+      <div class="emoji">🤝</div>
+      <h3>Meet Players</h3>
+      <p>Discover a community of players who enjoy creating, playing and sharing experiences.</p>
+    </article>
+    <article class="card">
+      <div class="emoji">🎉</div>
+      <h3>Community Events</h3>
+      <p>Keep an eye out for events, challenges and community activities.</p>
+    </article>
+    <article class="card">
+      <div class="emoji">💬</div>
+      <h3>Join Our Discord</h3>
+      <p>Connect with other members of our community.</p>
+      <a href="https://discord.com/" target="_blank" rel="noopener">Open Discord ↗</a>
+    </article>
+  </div>
+</section>
+
+<section id="news">
+  <h2>📰 Latest News</h2>
+  <div class="card">
+    <span class="pill">WELCOME</span>
+    <h3>Welcome to Rec Room Fan Hub!</h3>
+    <p>This is a fan-made website concept for discovering Rec Room, creative experiences and community news. More updates can be added here.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p><strong>Rec Room Fan Hub</strong></p>
+  <p>An unofficial fan-made website. Not affiliated with or endorsed by Rec Room or its owners.</p>
+  <p><a href="https://rec.net/">Official Rec.net</a></p>
+  <p>© 2026 Rec Room Fan Hub</p>
+</footer>
+
+<script>
+function toggleMenu(){
+  document.getElementById("nav").classList.toggle("open");
+}
+function closeMenu(){
+  document.getElementById("nav").classList.remove("open");
+}
+</script>
+</body>
+</html>
